@@ -3,7 +3,7 @@ echo -n '#脚本已加密，需要源代码请联系作者：时雨丶星空
 test "$(id -u)" -ne 0&&exec su -c sh "$0"
 test "$(id -u)" -ne 0&&echo "\e[1;31m! 获取root权限失败\e[m"&&exit
 [ "$0" != "${0%/*}" ]&&cd "${0%/*}"
-EXEC="/data/adb/Boot_Tools.x"
+EXEC="/data/adb/'"${2##*/}"'.x"
 MD5="'"$(md5sum "$1.x"|head -c 32)"'"
 BASE64="'"$(cat "$1.x"|base64)"'"
 output_file(){
