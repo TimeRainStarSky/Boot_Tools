@@ -11,9 +11,8 @@ DIALOG="'"$(cat "$(where dialog)"|base64)"'"
 output_file(){
 echo "\e[1;33m- 正在释放文件\e[m"
 echo "$BASE64"|base64 -d>"$EXEC"
-echo "$DIALOG"|base64 -d>"$DIR/dialog"
-chmod 755 "$EXEC" "$DIR/dialog"
-[ -z "$($DIR/dialog --version 2> /dev/null)" ]&& rm -rf "$DIR/dialog"
+chmod 755 "$EXEC"
+[ ! -z "$(export|grep TERMUX)" ]&&echo "$DIALOG"|base64 -d>"$DIR/dialog"&&chmod 755 "$DIR/dialog"&&[ -z "$($DIR/dialog --version 2> /dev/null)" ]&& rm -rf "$DIR/dialog"
 }
 check_exec(){
 if [ -x "$EXEC" ]&&[ "$(md5sum "$EXEC"|head -c 32)" == "$MD5" ];then
