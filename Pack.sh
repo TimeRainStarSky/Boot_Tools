@@ -14,11 +14,10 @@ $R HGcc$G Script$Y Pack$C Tools$O
 "
 [ ! -f "$1" ]&&echo "$R! $1文件不存在$O"&&exit
 [ -z "$(which HGcc 2>/dev/null)" ]&&echo "$R! HGcc编译器不存在$O"&&exit
-echo "$Y- 正在使用HGcc编译脚本：$O$1
-"
+echo "$Y- 正在使用HGcc编译脚本$O"
 HGcc -r "$1" "$1.HGcc"
 echo "
-$Y- 正在打包为自释放脚本：$O$2"
+$Y- 正在打包为自释放脚本$O"
 echo -n '#脚本已经过编译，需要源代码请联系作者：时雨丶星空
 [ "$(id -u)" -ne 0 ]&&exec su -c sh "$0"
 [ "$(id -u)" -ne 0 ]&&echo "\e[1;31m! 获取root权限失败\e[m"&&exit
