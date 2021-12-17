@@ -27,18 +27,20 @@ echo -n '#脚本已经过编译，需要源代码请联系作者：时雨丶星�
 EXEC="/data/adb/'"${2##*/}"'.HGcc"
 MD5="'"$(md5sum "$1.HGcc"|head -c 32)"'"
 BASE64="'"$(cat "$1.HGcc"|base64)"'"
+abort(){
+  echo "$@";exit
+}
 output_file(){
-echo "'"$Y"'- 正在释放文件'"$O"'"
-echo "$BASE64"|base64 -d>"$EXEC"
-chmod 755 "$EXEC"
+  echo "'"$Y"'- 正在释放脚本'"$O"'"
+  echo "$BASE64"|base64 -d>"$EXEC"||abort "'"$R"'! 脚本释放失败'"$O"'"
+  chmod 555 "$EXEC"||abort "'"$R"'! 脚本权限修改失败'"$O"'"
 }
 check_exec(){
-if [ -x "$EXEC" ]&&[ "$(md5sum "$EXEC"|head -c 32)" == "$MD5" ];then
-  exec "$EXEC" "$(pwd)" "${0##*/}"
-else
-  output_file
-  check_exec
-fi
+  if [ -x "$EXEC" ]&&[ "$(md5sum "$EXEC"|head -c 32)" == "$MD5" ];then
+    "$EXEC" "$(pwd)" "${0##*/}"||abort "'"$R"'! 脚本执行失败'"$O"'"
+  else
+    output_file;check_exec
+  fi
 }
 check_exec'>"$2"
 echo -n "version=$(cat "$1"|sed -n s/^VERSION=//p)
