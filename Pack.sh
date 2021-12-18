@@ -36,7 +36,7 @@ output_file(){
   chmod 555 "$EXEC"||abort "脚本权限修改失败"
 }
 check_exec(){
-  if [ -x "$EXEC" ]&&[ "$(md5sum "$EXEC"|head -c 32)" == "$MD5" ];then
+  if [ -x "$EXEC" ]&&[ "$(md5sum "$EXEC"|head -c 32)" = "$MD5" ];then
     echo "'"$G"'- 脚本校验成功，开始执行'"$O"'"
     "$EXEC" "$(pwd)" "${0##*/}"||abort "脚本执行失败"
   else
