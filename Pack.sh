@@ -6,13 +6,13 @@ C="\e[1;36m"
 B="\e[1;m"
 O="\e[m"
 [ "$(id -u)" -ne 0 ]&&echo "$Y- 正在获取root权限$O"&&exec su -c sh "$0" "$@"
-[ "$(id -u)" -ne 0 ]&&echo "$R! 获取root权限失败$O"&&exit
+[ "$(id -u)" -ne 0 ]&&echo "$R! 获取root权限失败$O"&&exit 1
 echo "$B************************
 $R HGcc$G Script$Y Pack$C Tools$O
 ************************
     $G酷安：$C时雨丶星空$O"
-[ ! -f "$1" ]&&echo "$R! $1文件不存在$O"&&exit
-[ -z "$(which HGcc 2>/dev/null)" ]&&echo "$R! HGcc编译器不存在$O"&&exit
+[ ! -f "$1" ]&&echo "$R! $1文件不存在$O"&&exit 1
+[ -z "$(which HGcc 2>/dev/null)" ]&&echo "$R! HGcc编译器不存在$O"&&exit 1
 echo "
 $Y- 正在使用HGcc编译脚本$O
 "
@@ -22,13 +22,14 @@ $Y- 正在打包为自释放脚本$O
 "
 echo -n '#脚本已经过编译，需要源代码请联系作者：时雨丶星空
 [ "$(id -u)" -ne 0 ]&&echo "'"$Y"'- 正在获取root权限'"$O"'"&&exec su -c sh "$0" "$@"
-[ "$(id -u)" -ne 0 ]&&echo "'"$R"'! 获取root权限失败'"$O"'"&&exit
+[ "$(id -u)" -ne 0 ]&&echo "'"$R"'! 获取root权限失败'"$O"'"&&exit 1
 [ "$0" != "${0%/*}" ]&&cd "${0%/*}"
 EXEC="/data/adb/'"${2##*/}"'.HGcc"
 MD5="'"$(md5sum "$1.HGcc"|head -c 32)"'"
 BASE64="'"$(cat "$1.HGcc"|base64)"'"
 abort(){
-  echo "'"$R"'! $@'"$O"'";exit
+  echo "
+'"$R"'! $@'"$O"'";exit 1
 }
 output_file(){
   echo "'"$Y"'- 正在释放脚本'"$O"'"
