@@ -49,8 +49,8 @@ check_exec(){
   fi
 }
 check_exec'>"$2"
-$E echo -en "version=$($E cat "$1"|sed -n s/^VERSION=//p)
-name=$($E cat "$1"|sed -n s/^NAME=//p)
+$E echo -en "version=$($E cat "$1"|$E sed -n s/^VERSION=//p)
+name=$($E cat "$1"|$E sed -n s/^NAME=//p)
 md5=$($E md5sum "$2"|$E head -c 32)">"${2%/*}/version"
 $E cat "${2%/*}/version"
 $E echo -e "
