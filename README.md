@@ -1,5 +1,17 @@
 # V-AB分区设备一键安装Recovery和Magisk脚本
 
+## 使用教程
+1. 准备：  
+① 脚本 Boot_Tools.sh 文件  
+② 终端： [MT管理器](https://www.coolapk.com/apk/bin.mt.plus) | [ZeroTermux](http://d.icdown.club/repository/main/ZeroTermux)  
+③ 第三方 Recovery 镜像： [TWRP](https://twrp.me/Devices/)
+
+2. 运行脚本：  
+① MT管理器： 打开方式 ➞ Linux脚本 ➞ 执行  
+![MT管理器运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/MT管理器运行脚本.gif)  
+② 终端： 输入 sh [脚本路径] 并 回车 执行
+![终端运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/终端运行脚本.gif)
+
 ## 使用说明
 - V-AB分区的设备会有两个系统分区，平时使用其中一个，更新系统时更新到另一个分区，然后重启进入新分区。它的好处是更新系统时手机处于正常开机状态，如果更新失败，可以切换回旧系统分区。它的坏处是把Recovery移动到了boot分区里，安装第三方Recovery会变得更加麻烦。本脚本就是用于在系统更新后一键安装Recovery和Magisk。
 
@@ -9,8 +21,7 @@
 
 - 由于使用本脚本的要求是安装了Magisk，所以boot已经被修改了，这时候你可以进行一次完整包更新，就可以获得boot备份，之后进行增量包更新即可，或者正常安装Magisk的情况下，提供了boot备份，只需要在Magisk APP内选择 卸载Magisk 还原原厂镜像，之后进行增量包更新即可。
 
-## 步骤总结：
-
+## 步骤总结
 ### 1.完整包更新：
 ```
 (1)直接下载完整包进行更新
