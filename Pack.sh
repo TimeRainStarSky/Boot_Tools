@@ -1,6 +1,6 @@
 R="[1;31m";G="[1;32m";Y="[1;33m";C="[1;36m";B="[1;m";O="[m"
 if [ "$(id -u)" != 0 ];then
-  echo "$Y- 正在获取root权限$O";su -c "sh $0 $@"&&exit||echo "$R! 获取root权限失败$O";exit 1
+  echo "$Y- 正在获取root权限$O";su -c "sh $0 $@";exit
 fi
 MAGISKPATH="$(magisk --path)";PATH="/data/adb/magisk:$MAGISKPATH:$MAGISKPATH/.magisk/busybox:$PATH"
 echo "$B************************
@@ -17,7 +17,7 @@ $Y- 正在打包为自释放脚本$O
 "
 echo -n '#脚本已经过编译，需要源代码请联系作者：时雨丶星空
 if [ "$(id -u)" != 0 ];then
-  echo "'"$Y"'- 正在获取root权限'"$O"'";su -c "sh $0 $@"&&exit||echo "'"$R"'! 获取root权限失败'"$O"'";exit 1
+  echo "'"$Y"'- 正在获取root权限'"$O"'";su -c "sh $0 $@";exit
 fi
 MAGISKPATH="$(magisk --path)";PATH="/data/adb/magisk:$MAGISKPATH:$MAGISKPATH/.magisk/busybox:$PATH"
 [ "$0" != "${0%/*}" ]&&cd "${0%/*}";EXEC="/data/adb/'"${2##*/}"'.HGcc";MD5="'"$(md5sum "$1.HGcc"|head -c 32)"'"
