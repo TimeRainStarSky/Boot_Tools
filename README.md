@@ -51,6 +51,6 @@
 - 酷安：[时雨丶星空](http://www.coolapk.com/u/2650948)
 - QQ：[2536554304](https://qm.qq.com/cgi-bin/qm/qr?k=x8LtlP8vwZs7qLwmsbCsyLoAHy7Et1Pj)
 - Telegram：[TimeRainStarSky](https://t.me/TimeRainStarSky)
-### 筱寂XIAOJI
+### Awstme
 - GitHub：[Awstme](https://github.com/Awstme)
-- 酷安：[筱寂XIAOJI](http://www.coolapk.com/u/2806404)
+- 酷安：[Awstme](http://www.coolapk.com/u/2806404)
