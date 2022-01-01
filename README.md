@@ -3,13 +3,13 @@
 ## 使用教程
 1. 准备：  
 ① 脚本 Boot_Tools.sh 文件  
-② 终端： [MT管理器](https://www.coolapk.com/apk/bin.mt.plus) | [ZeroTermux](http://d.icdown.club/repository/main/ZeroTermux)  
-③ 第三方 Recovery 镜像： [TWRP](https://twrp.me/Devices/)
+② 终端：[MT管理器](https://www.coolapk.com/apk/bin.mt.plus) | [ZeroTermux](http://d.icdown.club/repository/main/ZeroTermux)  
+③ 第三方 Recovery 镜像：[TWRP](https://twrp.me/Devices/)
 
 2. 运行脚本：  
-① MT管理器： 打开方式 ➞ Linux脚本 ➞ 执行  
+① MT管理器：打开方式 ➞ Linux脚本 ➞ 执行  
 ![MT管理器运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/MT管理器运行脚本.gif)  
-② 终端： 输入 sh [脚本路径] 并 回车 执行
+② 终端：输入 sh [脚本路径] 并 回车 执行
 ![终端运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/终端运行脚本.gif)
 
 ## 使用说明
