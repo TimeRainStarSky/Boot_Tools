@@ -1,4 +1,7 @@
 # V-AB分区设备一键安装Recovery和Magisk脚本
+[![Stars](https://img.shields.io/github/starsTimeRainStarSky/Boot_Tools?label=stars)](https://github.com/TimeRainStarSky)
+[![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/Boot_Tools/total)](https://github.com/TimeRainStarSky/Boot_Tools/releases)
+[![Release](https://img.shields.io/github/v/release/TimeRainStarSky/Boot_Tools?label=release)](https://github.com/TimeRainStarSky/Boot_Tools/releases/latest)
 
 ## 使用教程
 1. 准备：  
@@ -8,9 +11,9 @@
 
 2. 运行脚本：  
 ① MT管理器：打开方式 ➞ Linux脚本 ➞ 执行  
-![MT管理器运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/MT管理器运行脚本.gif)  
+![MT管理器运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/MT管理器运行脚本.gif)(https://www.coolapk.com/apk/bin.mt.plus)  
 ② 终端：输入 sh [脚本路径] 并 回车 执行
-![终端运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/终端运行脚本.gif)
+![终端运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/终端运行脚本.gif)(http://d.icdown.club/repository/main/ZeroTermux)
 
 ## 使用说明
 - V-AB分区的设备会有两个系统分区，平时使用其中一个，更新系统时更新到另一个分区，然后重启进入新分区。它的好处是更新系统时手机处于正常开机状态，如果更新失败，可以切换回旧系统分区。它的坏处是把Recovery移动到了boot分区里，安装第三方Recovery会变得更加麻烦。本脚本就是用于在系统更新后一键安装Recovery和Magisk。
