@@ -1,5 +1,5 @@
 # V-AB分区设备一键安装Recovery和Magisk脚本
-[![Stars](https://img.shields.io/github/starsTimeRainStarSky/Boot_Tools?label=stars)](https://github.com/TimeRainStarSky)
+[![Stars](https://img.shields.io/github/stars/TimeRainStarSky/Boot_Tools?label=stars)](https://github.com/TimeRainStarSky)
 [![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/Boot_Tools/total)](https://github.com/TimeRainStarSky/Boot_Tools/releases)
 [![Release](https://img.shields.io/github/v/release/TimeRainStarSky/Boot_Tools?label=release)](https://github.com/TimeRainStarSky/Boot_Tools/releases/latest)
 
