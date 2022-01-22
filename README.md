@@ -5,7 +5,7 @@
 
 ## 使用教程
 1. 准备：  
-① 脚本 Boot_Tools.sh 文件  
+① 脚本 [Boot_Tools.sh](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Boot_Tools.sh) 文件  
 ② 终端：[MT管理器](https://www.coolapk.com/apk/bin.mt.plus) | [ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)  
 ③ 第三方 Recovery 镜像：[TWRP](https://twrp.me/Devices/)
 
