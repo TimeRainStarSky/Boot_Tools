@@ -48,6 +48,8 @@
 
 使用本脚本出现问题，可以联系作者帮忙，但作者不负任何责任
 
+反馈问题请带上脚本目录内 日志.log
+
 ## 联系方式
 ### 时雨丶星空
 - GitHub：[TimeRainStarSky](https://github.com/TimeRainStarSky)
