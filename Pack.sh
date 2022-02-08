@@ -5,7 +5,7 @@ echo "$B*************************
 $R Shell$Y Script$G Pack$C Tools$O
 *************************
     ${G}酷安：${C}时雨丶星空$O"
-[ ! -s "$1" ]&&abort "输入文件不存在";[ -z "$2" ]&&abort "输出文件不存在";[ -z "$(which shc)" ]&&abort "shc编译器不存在"
+[ ! -s "$1" ]&&abort "输入文件不存在";[ -z "$2" ]&&abort "输出文件不存在";[ -z "$(command -v shc)" ]&&abort "shc编译器不存在"
 echo "
 $Y- 正在使用shc编译脚本$O
 ";shc -vrf "$1"||abort "脚本编译失败"
