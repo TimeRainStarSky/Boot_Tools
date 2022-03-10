@@ -52,6 +52,7 @@
 反馈问题请带上脚本目录内 日志.log
 
 ## 联系方式
+- QQ群组：[211414032](https://jq.qq.com/?k=QU1xGLEB)
 ### 时雨丶星空
 - GitHub：[TimeRainStarSky](https://github.com/TimeRainStarSky)
 - 酷安：[时雨丶星空](http://www.coolapk.com/u/2650948)
