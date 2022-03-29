@@ -1,4 +1,4 @@
-#Boot_Tools 在线TWRP下载脚本 作者：时雨🌌星空
+#Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
 [ "$1" = "verify" ]&&{
 VERSION="2022-03-29-1";PROTOCOL="v1"
 if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
