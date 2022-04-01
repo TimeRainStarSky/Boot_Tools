@@ -1,6 +1,6 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
 [ "$1" = "verify" ]&&{
-VERSION="2022-03-29-1";PROTOCOL="v1"
+VERSION="2022-04-01-1";PROTOCOL="v1"
 if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
   echo "VERIFY=$(echo "$3-$PROTOCOL"|base64|md5sum|head -c 32) VERSION=$VERSION";exit
 else
@@ -19,6 +19,30 @@ check_device(){ case "$1" in
     URL="http://124.222.200.56/TWRP/thyme/3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334.img"
     MD5="6c87a334668382e7ad0970612fb147e4"
     ;;
+  "venus")
+    DEVICENAME="Mi 11"
+    RECNAME="twrp-3.6.1_11-0-venus.img"
+    URL="http://124.222.200.56/TWRP/venus/twrp-3.6.1_11-0-venus.img"
+    MD5="1fcbdda294f19fa8e2133f06a2b6bfca"
+    ;;
+  "mars")
+    DEVICENAME="Mi 11 Pro"
+    RECNAME="twrp-3.6.1_11-0-mars.img"
+    URL="http://124.222.200.56/TWRP/mars/twrp-3.6.1_11-0-mars.img"
+    MD5="4007824e1f38d948b0def959b02ae116"
+    ;;
+  "star")
+    DEVICENAME="Mi 11 Ultra"
+    RECNAME="twrp-3.6.1_11-0-star.img"
+    URL="http://124.222.200.56/TWRP/star/twrp-3.6.1_11-0-star.img"
+    MD5="c6060ecbfc3f1c0fd4f74ddd45d2ad35"
+    ;;
+  "renoir")
+    DEVICENAME="Mi 11 Lite"
+    RECNAME="twrp-3.6.1_11-0-renoir.img"
+    URL="http://124.222.200.56/TWRP/renoir/twrp-3.6.1_11-0-renoir.img"
+    MD5="b58d2a76205f56f714169288517672ee"
+    ;;
   *)echo "
 $R! 不支持的机型：$1$O 请向作者反馈
 
@@ -32,10 +56,10 @@ $C- 请选择机型：$O
 
 $C  (1)$O Redmi K40	(alioth)
 $C  (2)$O Mi 10S	(thyme)
-$C  (3)$O 敬请期待	(3)
-$C  (4)$O 敬请期待	(4)
-$C  (5)$O 敬请期待	(5)
-$C  (6)$O 敬请期待	(6)
+$C  (3)$O Mi 11	(venus)
+$C  (4)$O Mi 11 Pro	(mars)
+$C  (5)$O Mi 11 Ultra	(star)
+$C  (6)$O Mi 11 Lite	(renoir)
 $C  (7)$O 敬请期待	(7)
 $C  (8)$O 敬请期待	(8)
 $C  (9)$O 敬请期待	(9)
@@ -45,10 +69,10 @@ $C- 请输入你的选择：$O";read MAIN;echo "$MAIN">>"$DIR/.log"
   case "$MAIN" in
   "1")check_device alioth;;
   "2")check_device thyme;;
-  "3")check_device 3;;
-  "4")check_device 4;;
-  "5")check_device 5;;
-  "6")check_device 6;;
+  "3")check_device venus;;
+  "4")check_device mars;;
+  "5")check_device star;;
+  "6")check_device renoir;;
   "7")check_device 7;;
   "8")check_device 8;;
   "9")check_device 9;;
