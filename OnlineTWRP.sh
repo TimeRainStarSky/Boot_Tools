@@ -1,11 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-[ "$1" = "verify" ]&&{
-VERSION="2022-04-01-2";PROTOCOL="v1"
-if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
-  echo "VERIFY=$(echo "$3-$PROTOCOL"|base64|md5sum|head -c 32) VERSION=$VERSION";exit
-else
-  echo "传入参数不正确";exit 1
-fi;}
+ONLINEVERSION="2022-04-03-1"
 check_device(){ case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
@@ -43,6 +37,12 @@ check_device(){ case "$1" in
     URL="http://124.222.200.56/TWRP/renoir/twrp-3.6.1_11-0-renoir.img.xz"
     MD5="286273888c0d839d4de9fcafb62baaed"
     ;;
+  "odin")
+    DEVICENAME="Mi MIX 4"
+    RECNAME="twrp-3.6.1_11-0-odinx.img.xz"
+    URL="http://124.222.200.56/TWRP/odin/twrp-3.6.1_11-0-odinx.img.xz"
+    MD5="cc10553bc4324a0687bc602cf1907427"
+    ;;
   *)echo "
 $R! 不支持的机型：$1$O 请向作者反馈
 
@@ -60,7 +60,7 @@ $C  (3)$O Mi 11	(venus)
 $C  (4)$O Mi 11 Pro	(mars)
 $C  (5)$O Mi 11 Ultra	(star)
 $C  (6)$O Mi 11 Lite	(renoir)
-$C  (7)$O 敬请期待	(7)
+$C  (7)$O Mi MIX 4	(odin)
 $C  (8)$O 敬请期待	(8)
 $C  (9)$O 敬请期待	(9)
 $C  (*)$O 返回
@@ -73,7 +73,7 @@ $C- 请输入你的选择：$O";read MAIN;echo "$MAIN">>"$DIR/.log"
   "4")check_device mars;;
   "5")check_device star;;
   "6")check_device renoir;;
-  "7")check_device 7;;
+  "7")check_device odin;;
   "8")check_device 8;;
   "9")check_device 9;;
   *)design;main
@@ -93,6 +93,12 @@ $Y- 开始下载$O
   mv -vf rec.img "$DIR/rec.img"||abort "移动下载TWRP到脚本路径失败"
   echo "
 $G- TWRP下载完成$O";update_ramdisk;}
+[ "$1" = "verify" ]&&{ PROTOCOL="v1"
+if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
+  echo "VERIFY=$(echo "$3-$PROTOCOL"|base64|md5sum|head -c 32) VERSION=$ONLINEVERSION";exit
+else
+  echo "传入参数不正确";exit 1
+fi;}
 echo "
   感谢：$C火柴ANKs$G(提供下载服务器)$O
 
