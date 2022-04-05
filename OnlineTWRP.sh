@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-05-1"
+ONLINEVERSION="2022-04-06-1"
 check_device(){ case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
@@ -60,19 +60,19 @@ $C  (1)$O切换机型 $C(*)$O开始下载";choose choose_device download_twrp;}
 choose_device(){ echo -n "
 $C- 请选择机型：$O
 
-$C  (1)$O Redmi K40		(alioth)
-$C  (2)$O Redmi K40 Pro	(haydn)
-$C  (3)$O Mi 10S		(thyme)
-$C  (4)$O Mi 11		(venus)
-$C  (5)$O Mi 11 Pro		(mars)
-$C  (6)$O Mi 11 Ultra	(star)
-$C  (6)$O Mi 11 Lite	(renoir)
-$C  (8)$O Mi MIX 4		(odin)
-$C  (9)$O 敬请期待		(9)
-$C  (*)$O 返回
+$C  (1)$O Redmi K40     (alioth)
+$C  (2)$O Redmi K40 Pro (haydn)
+$C  (3)$O Mi 10S        (thyme)
+$C  (4)$O Mi 11         (venus)
+$C  (5)$O Mi 11 Pro     (mars)
+$C  (6)$O Mi 11 Ultra   (star)
+$C  (6)$O Mi 11 Lite    (renoir)
+$C  (8)$O Mi MIX 4      (odin)
+$C  (0)$O 返回
 
-$C- 请输入你的选择：$O";read MAIN;echo "$MAIN">>"$DIR/.log"
-  case "$MAIN" in
+$C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
+  case "$CHOOSE" in
+  "0")design;main;;
   "1")check_device alioth;;
   "2")check_device haydn;;
   "3")check_device thyme;;
@@ -81,8 +81,7 @@ $C- 请输入你的选择：$O";read MAIN;echo "$MAIN">>"$DIR/.log"
   "6")check_device star;;
   "7")check_device renoir;;
   "8")check_device odin;;
-  "9")check_device 9;;
-  *)design;main
+  *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
 $R! $2$O";echo "
