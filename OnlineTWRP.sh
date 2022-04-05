@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-04-1"
+ONLINEVERSION="2022-04-05-1"
 check_device(){ case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
@@ -12,6 +12,12 @@ check_device(){ case "$1" in
     RECNAME="3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334.img.xz"
     URL="http://124.222.200.56/TWRP/thyme/3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334.img.xz"
     MD5="b01fe65236fee66e9502bd6ed75e6fa5"
+    ;;
+  "haydn")
+    DEVICENAME="Redmi K40 Pro"
+    RECNAME="twrp-3.6.1_11-0-haydn.img.xz"
+    URL="http://124.222.200.56/TWRP/haydn/twrp-3.6.1_11-0-haydn.img.xz"
+    MD5="dc638727ee822d2d498e780bd010ba66"
     ;;
   "venus")
     DEVICENAME="Mi 11"
@@ -54,27 +60,27 @@ $C  (1)$O切换机型 $C(*)$O开始下载";choose choose_device download_twrp;}
 choose_device(){ echo -n "
 $C- 请选择机型：$O
 
-$C  (1)$O Redmi K40	(alioth)
-$C  (2)$O Mi 10S	(thyme)
-$C  (3)$O Mi 11	(venus)
-$C  (4)$O Mi 11 Pro	(mars)
-$C  (5)$O Mi 11 Ultra	(star)
+$C  (1)$O Redmi K40		(alioth)
+$C  (2)$O Redmi K40 Pro	(haydn)
+$C  (3)$O Mi 10S		(thyme)
+$C  (4)$O Mi 11		(venus)
+$C  (5)$O Mi 11 Pro		(mars)
+$C  (6)$O Mi 11 Ultra	(star)
 $C  (6)$O Mi 11 Lite	(renoir)
-$C  (7)$O Mi MIX 4	(odin)
-$C  (8)$O 敬请期待	(8)
-$C  (9)$O 敬请期待	(9)
+$C  (8)$O Mi MIX 4		(odin)
+$C  (9)$O 敬请期待		(9)
 $C  (*)$O 返回
 
 $C- 请输入你的选择：$O";read MAIN;echo "$MAIN">>"$DIR/.log"
   case "$MAIN" in
   "1")check_device alioth;;
-  "2")check_device thyme;;
-  "3")check_device venus;;
-  "4")check_device mars;;
-  "5")check_device star;;
-  "6")check_device renoir;;
-  "7")check_device odin;;
-  "8")check_device 8;;
+  "2")check_device haydn;;
+  "3")check_device thyme;;
+  "4")check_device venus;;
+  "5")check_device mars;;
+  "6")check_device star;;
+  "7")check_device renoir;;
+  "8")check_device odin;;
   "9")check_device 9;;
   *)design;main
   esac;}
