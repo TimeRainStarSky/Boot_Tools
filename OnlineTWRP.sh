@@ -84,7 +84,7 @@ $R! 下载文件失败，请检查网络，并尝试重新下载，或更换服�
 
 $C  (1)$O重试 $C(*)$O返回";choose download_twrp;}
 download_twrp(){ echo "
-$Y- 开始下载，服务器速度有点慢，请稍等$O
+$Y- 开始下载TWRP，服务器速度有点慢，请稍等$O
 "
   eval geturl "$URL"||abort_download_twrp
   [ "$(md5sum "$RECNAME"|head -c 32)" != "$MD5" ]&&abort_download_twrp "下载文件校验错误"
