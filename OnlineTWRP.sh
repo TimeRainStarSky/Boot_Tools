@@ -99,6 +99,7 @@ if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
 else
   echo "传入参数不正确";exit 1
 fi;}
+[ -z "$DEVICE" ]&&{ echo "[1;31m! 脚本不支持独立运行，请配合Boot_Tools脚本使用[m";exit 1;}
 echo "
   感谢：$C火柴ANKs$G(提供下载服务器)$O
 
