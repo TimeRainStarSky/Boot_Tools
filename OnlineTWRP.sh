@@ -1,46 +1,46 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-08-1"
+ONLINEVERSION="2022-04-09-1"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
-    RECNAME="3.6.1_11-RedmiK40_v3.4_A12-alioth-skkk_49fc7a15.img.xz"
-    MD5="ac57cd9a68dd9176eb283c02669515b3"
+    RECNAME="3.6.1_11-RedmiK40_v3.4_A12-alioth-skkk_49fc7a15-cleaned.img.xz"
+    MD5="7e84684dd37c5faf6e450963d0229781"
     ;;
   "thyme")
     DEVICENAME="Mi 10S"
-    RECNAME="3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334.img.xz"
-    MD5="b01fe65236fee66e9502bd6ed75e6fa5"
+    RECNAME="3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334-cleaned.img.xz"
+    MD5="6034d857f7a63f6b0f1bc7445020fccb"
     ;;
   "haydn")
     DEVICENAME="Redmi K40 Pro"
-    RECNAME="twrp-3.6.1_11-0-haydn.img.xz"
-    MD5="dc638727ee822d2d498e780bd010ba66"
+    RECNAME="twrp-3.6.1_11-0-haydn-cleaned.img.xz"
+    MD5="896d259ad5845b357a8a09db9023b11c"
     ;;
   "venus")
     DEVICENAME="Mi 11"
-    RECNAME="twrp-3.6.1_11-0-venus.img.xz"
-    MD5="03b6c887e59a8628713a9798212bebe7"
+    RECNAME="twrp-3.6.1_11-0-venus-cleaned.img.xz"
+    MD5="8745acf96962a5c9bed454e3dd6091ac"
     ;;
   "mars")
     DEVICENAME="Mi 11 Pro"
-    RECNAME="twrp-3.6.1_11-0-mars.img.xz"
-    MD5="1e43059b303d62f1012ee7db1ecf88f1"
+    RECNAME="twrp-3.6.1_11-0-mars-cleaned.img.xz"
+    MD5="4cfda2bcebd36b141c70a3bece49a329"
     ;;
   "star")
     DEVICENAME="Mi 11 Ultra"
-    RECNAME="twrp-3.6.1_11-0-star.img.xz"
-    MD5="dc1050ca9f94d24462d408dff23ad854"
+    RECNAME="twrp-3.6.1_11-0-star-cleaned.img.xz"
+    MD5="fe1c8b215446ec709fb9f08c429c8fe3"
     ;;
   "renoir")
     DEVICENAME="Mi 11 Lite"
-    RECNAME="twrp-3.6.1_11-0-renoir.img.xz"
-    MD5="286273888c0d839d4de9fcafb62baaed"
+    RECNAME="twrp-3.6.1_11-0-renoir-cleaned.img.xz"
+    MD5="377889db2952865063057419cb62140c"
     ;;
   "odin")
     DEVICENAME="Mi MIX 4"
-    RECNAME="twrp-3.6.1_11-0-odinx.img.xz"
-    MD5="cc10553bc4324a0687bc602cf1907427"
+    RECNAME="twrp-3.6.1_11-0-odinx-cleaned.img.xz"
+    MD5="5aa1a1c1ec788a0390a1feae3bf25061"
     ;;
   *)echo "
 $R! 不支持的机型：$1$O 请向作者反馈
