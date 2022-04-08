@@ -101,6 +101,4 @@ else
 fi;}
 [ -z "$DEVICE" ]&&{ echo "[1;31m! 脚本不支持独立运行，请配合Boot_Tools脚本使用[m";exit 1;}
 echo "
-  感谢：$C火柴ANKs$G(提供下载服务器)$O
-
 $Y- 正在检测机型$O";check_device "$DEVICE"
