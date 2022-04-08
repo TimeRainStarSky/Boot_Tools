@@ -1,6 +1,6 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
 ONLINEVERSION="2022-04-08-1"
-check_device(){ SERVER="https://gitee.com/TimeRainStarSky/TWRP"
+check_device(){ SERVER="https://gitee.com/TimeRainStarSky/TWRP/raw/main"
   case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
