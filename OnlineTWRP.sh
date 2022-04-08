@@ -43,7 +43,7 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     MD5="5aa1a1c1ec788a0390a1feae3bf25061"
     ;;
   *)echo "
-$R! 不支持的机型：$1$O 请向作者反馈
+$R! 不支持的机型：$1$O 适配请加群：201911128
 
 $C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
 esac
