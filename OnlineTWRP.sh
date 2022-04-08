@@ -1,6 +1,6 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
 ONLINEVERSION="2022-04-08-1"
-check_device(){ SERVER="https://gitee.com/TimeRainStarSky/TWRP/raw/main"
+check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
@@ -84,7 +84,7 @@ $R! 下载文件失败，请检查网络，并尝试重新下载，或更换服�
 
 $C  (1)$O重试 $C(*)$O返回";choose download_twrp;}
 download_twrp(){ echo "
-$Y- 开始下载TWRP，服务器速度有点慢，请稍等$O
+$Y- 开始下载TWRP$O
 "
   eval geturl "$URL"||abort_download_twrp
   [ "$(md5sum "$RECNAME"|head -c 32)" != "$MD5" ]&&abort_download_twrp "下载文件校验错误"
