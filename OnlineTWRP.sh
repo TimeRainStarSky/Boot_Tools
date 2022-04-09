@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-09-1"
+ONLINEVERSION="2022-04-09-2"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -49,7 +49,7 @@ $C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
 esac
   URL="$SERVER/$1/$RECNAME"
   echo "
-  当前机型为：$C$DEVICENAME ($1)$O
+  当前机型为：$C$DEVICENAME ($1)$O 加群了解更多信息：${C}201911128$O
 
 $C  (1)$O切换机型 $C(*)$O开始下载";choose choose_device download_twrp;}
 choose_device(){ echo -n "
