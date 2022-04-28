@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-09-2"
+ONLINEVERSION="2022-04-28-1";MINIVER="20220428"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -11,6 +11,11 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     DEVICENAME="Mi 10S"
     RECNAME="3.6.1_11-Mi10S_v3.4_A12-thyme-skkk_6c87a334-cleaned.img.xz"
     MD5="6034d857f7a63f6b0f1bc7445020fccb"
+    ;;
+  "munch")
+    DEVICENAME="Redmi K40S"
+    RECNAME="3.6.1_11-RedmiK40S_v3.4_A12-munch-skkk_3dee7e7f-cleaned.img.xz"
+    MD5="e4f975911a132ffe2dc8c4731f080f58"
     ;;
   "haydn")
     DEVICENAME="Redmi K40 Pro"
@@ -45,41 +50,41 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   *)echo "
 $R! 不支持的机型：$1$O
 
-  适配请加群：${C}201911128$O
+  适配请加群：${C}211414032$O
 
 $C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
 esac
   URL="$SERVER/$1/$RECNAME"
   echo "
   当前机型为：$C$DEVICENAME ($1)$O
-  
-  加群了解更多信息：${C}201911128$O
 
 $C  (1)$O切换机型 $C(*)$O开始下载";choose choose_device download_twrp;}
 choose_device(){ echo -n "
 $C- 请选择机型：$O
 
 $C  (1)$O Redmi K40     (alioth)
-$C  (2)$O Redmi K40 Pro (haydn)
-$C  (3)$O Mi 10S        (thyme)
-$C  (4)$O Mi 11         (venus)
-$C  (5)$O Mi 11 Pro     (mars)
-$C  (6)$O Mi 11 Ultra   (star)
-$C  (7)$O Mi 11 Lite    (renoir)
-$C  (8)$O Mi MIX 4      (odin)
+$C  (2)$O Redmi K40S    (munch)
+$C  (3)$O Redmi K40 Pro (haydn)
+$C  (4)$O Mi 10S        (thyme)
+$C  (5)$O Mi 11         (venus)
+$C  (6)$O Mi 11 Pro     (mars)
+$C  (7)$O Mi 11 Ultra   (star)
+$C  (8)$O Mi 11 Lite    (renoir)
+$C  (9)$O Mi MIX 4      (odin)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   case "$CHOOSE" in
   "0")design;main;;
   "1")check_device alioth;;
-  "2")check_device haydn;;
-  "3")check_device thyme;;
-  "4")check_device venus;;
-  "5")check_device mars;;
-  "6")check_device star;;
-  "7")check_device renoir;;
-  "8")check_device odin;;
+  "2")check_device munch;;
+  "3")check_device haydn;;
+  "4")check_device thyme;;
+  "5")check_device venus;;
+  "6")check_device mars;;
+  "7")check_device star;;
+  "8")check_device renoir;;
+  "9")check_device odin;;
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
@@ -90,11 +95,11 @@ $C  (1)$O重试 $C(*)$O返回";choose download_twrp;}
 download_twrp(){ echo "
 $Y- 开始下载TWRP$O
 "
-  eval geturl "$URL"||abort_download_twrp
-  [ "$(md5sum "$RECNAME"|head -c 32)" != "$MD5" ]&&abort_download_twrp "下载文件校验错误"
-  xzcat "$RECNAME">rec.img||abort "下载文件解压失败"
+  mktmp
+  eval geturl "$URL">"$TMP/rec.img.xz"||abort_download_twrp
+  [ "$(md5sum "$TMP/rec.img.xz"|head -c 32)" != "$MD5" ]&&abort_download_twrp "下载文件校验错误"
   [ -f "$DIR/rec.img" ]&&{ mv -vf "$DIR/rec.img" "$DIR/rec.img.bak"||abort "重命名原rec.img失败";}
-  mv -vf rec.img "$DIR/rec.img"||abort "移动下载TWRP到脚本路径失败"
+  xzcat "$TMP/rec.img.xz">"$DIR/rec.img"||{ [ -f "$DIR/rec.img.bak" ]&&mv -vf "$DIR/rec.img.bak" "$DIR/rec.img";abort "下载文件解压失败";}
   echo "
 $G- TWRP下载完成$O";update_ramdisk;}
 [ "$1" = "verify" ]&&{ PROTOCOL="v1"
@@ -103,6 +108,8 @@ if [ "$(echo "$2-$PROTOCOL"|base64|md5sum|head -c 32)" = "$3" ];then
 else
   echo "传入参数不正确";exit 1
 fi;}
-[ -z "$DEVICE" ]&&{ echo "[1;31m! 脚本不支持独立运行，请配合Boot_Tools脚本使用[m";exit 1;}
+[ -n "$VERSION" ]&&[ -n "$NAME" ]||{ echo "[1;31m! 脚本不支持独立运行，请配合Boot_Tools脚本使用[m";exit 1;}
+[ "$VERSION" -lt "$MINIVER" ]&&{ echo "
+$R! Boot_Tools版本过低，请更新后重试$O";update;exit;}
 echo "
 $Y- 正在检测机型$O";check_device "$DEVICE"
