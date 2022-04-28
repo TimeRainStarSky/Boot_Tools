@@ -94,9 +94,7 @@ $R! 下载文件失败，请检查网络，并尝试重新下载，或更换服�
 $C  (1)$O重试 $C(*)$O返回";choose download_twrp;}
 download_twrp(){ echo "
 $Y- 开始下载TWRP$O
-"
-  mktmp
-  eval geturl "$URL">"$TMP/rec.img.xz"||abort_download_twrp
+";mktmp;eval geturl "$URL">"$TMP/rec.img.xz"||abort_download_twrp
   [ "$(md5sum "$TMP/rec.img.xz"|head -c 32)" != "$MD5" ]&&abort_download_twrp "下载文件校验错误"
   [ -f "$DIR/rec.img" ]&&{ mv -vf "$DIR/rec.img" "$DIR/rec.img.bak"||abort "重命名原rec.img失败";}
   xzcat "$TMP/rec.img.xz">"$DIR/rec.img"||{ [ -f "$DIR/rec.img.bak" ]&&mv -vf "$DIR/rec.img.bak" "$DIR/rec.img";abort "下载文件解压失败";}
