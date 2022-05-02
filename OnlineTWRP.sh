@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-04-28-1";MINIVER="202204280"
+ONLINEVERSION="2022-05-02-1";MINIVER="202205020"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -46,6 +46,21 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     DEVICENAME="Mi MIX 4"
     RECNAME="twrp-3.6.1_11-0-odinx-cleaned.img.xz"
     MD5="5aa1a1c1ec788a0390a1feae3bf25061"
+    ;;
+  "ares")
+    DEVICENAME="Redmi K40 Gaming"
+    RECNAME="twrp-ares-cleaned.img.xz"
+    MD5="19c9875bc4c9e7538581be50bb9b17eb"
+    ;;
+  "chopin")
+    DEVICENAME="Redmi Note 10 Pro"
+    RECNAME="twrp-chopin-cleaned.img.xz"
+    MD5="c2c2d5c4cb18c01ba0be9cd7d8f9b5c6"
+    ;;
+  "pstar")
+    DEVICENAME="Motorola Edge S Pro"
+    RECNAME="twrp-pstar-cleaned.img.xz"
+    MD5="ea2a23351f7ab7e24239a99c18c3a2ed"
     ;;
   *)echo "
 $R! 不支持的机型：$1$O
