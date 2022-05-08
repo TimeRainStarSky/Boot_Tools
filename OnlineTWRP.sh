@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-05-02-1";MINIVER="202205020"
+ONLINEVERSION="2022-05-08-1";MINIVER="202205020"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -54,8 +54,8 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     ;;
   "chopin")
     DEVICENAME="Redmi Note 10 Pro"
-    RECNAME="twrp-chopin-cleaned.img.xz"
-    MD5="c2c2d5c4cb18c01ba0be9cd7d8f9b5c6"
+    RECNAME="OrangeFox-R11.1-Unofficial-Stable-chopin-cleaned.img.xz"
+    MD5="e2f866ec76c6c2a51f7ee1f1a79974fa"
     ;;
   "pstar")
     DEVICENAME="Motorola Edge S Pro"
