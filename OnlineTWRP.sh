@@ -91,7 +91,7 @@ $C  (6)$O Mi 11 Pro     (mars)
 $C  (7)$O Mi 11 Ultra   (star)
 $C  (8)$O Mi 11 Lite    (renoir)
 $C  (9)$O Mi MIX 4      (odin)
-$C  (a)$O LG G8X        (mh2lm)
+$C  (a)$O LG G8X ThinQ  (mh2lm)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
