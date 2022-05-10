@@ -48,7 +48,7 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     MD5="5aa1a1c1ec788a0390a1feae3bf25061"
     ;;
   "mh2lm")
-    DEVICENAME="LG G8X"
+    DEVICENAME="LG G8X ThinQ"
     RECNAME="twrp-mh2lm-cleaned.img.xz"
     MD5="cfe44c903a52d98d010d3d40f75d49ab"
     ;;
