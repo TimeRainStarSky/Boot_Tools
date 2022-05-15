@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-05-15-1";MINIVER="202205150"
+ONLINEVERSION="2022-05-15-2";MINIVER="202205150"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -52,11 +52,6 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     RECNAME="twrp-mh2lm-cleaned.img.xz"
     MD5="cfe44c903a52d98d010d3d40f75d49ab"
     ;;
-  "meizu18s")
-    DEVICENAME="MEIZU 18s"
-    RECNAME="twrp-meizu18s-cleaned.img.xz"
-    MD5="367814efc1f40b72a585fe7864769a4e"
-    ;;
   "ares")
     DEVICENAME="Redmi K40 Gaming"
     RECNAME="twrp-ares-cleaned.img.xz"
@@ -71,6 +66,11 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     DEVICENAME="Motorola Edge S Pro"
     RECNAME="twrp-pstar-cleaned.img.xz"
     MD5="ea2a23351f7ab7e24239a99c18c3a2ed"
+    ;;
+  "meizu18s")
+    DEVICENAME="MEIZU 18s"
+    RECNAME="twrp-meizu18s-cleaned.img.xz"
+    MD5="367814efc1f40b72a585fe7864769a4e"
     ;;
   *)echo "
 $R! 不支持的机型：$1$O
@@ -97,7 +97,6 @@ $C  (7)$O Mi 11 Ultra   (star)
 $C  (8)$O Mi 11 Lite    (renoir)
 $C  (9)$O Mi MIX 4      (odin)
 $C  (a)$O LG G8X ThinQ  (mh2lm)
-$C  (b)$O MEIZU 18s     (meizu18s)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
@@ -113,7 +112,6 @@ $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   "8")check_device renoir;;
   "9")check_device odin;;
   "a")check_device mh2lm;;
-  "b")check_device meizu18s;;
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
