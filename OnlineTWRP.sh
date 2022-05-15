@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-05-10-1";MINIVER="202205100"
+ONLINEVERSION="2022-05-15-1";MINIVER="202205150"
 check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "alioth")
@@ -51,6 +51,11 @@ check_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     DEVICENAME="LG G8X ThinQ"
     RECNAME="twrp-mh2lm-cleaned.img.xz"
     MD5="cfe44c903a52d98d010d3d40f75d49ab"
+    ;;
+  "meizu18s")
+    DEVICENAME="MEIZU 18s"
+    RECNAME="twrp-meizu18s-cleaned.img.xz"
+    MD5="367814efc1f40b72a585fe7864769a4e"
     ;;
   "ares")
     DEVICENAME="Redmi K40 Gaming"
