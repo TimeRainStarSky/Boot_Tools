@@ -97,6 +97,7 @@ $C  (7)$O Mi 11 Ultra   (star)
 $C  (8)$O Mi 11 Lite    (renoir)
 $C  (9)$O Mi MIX 4      (odin)
 $C  (a)$O LG G8X ThinQ  (mh2lm)
+$C  (b)$O MEIZU 18s     (meizu18s)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
@@ -112,6 +113,7 @@ $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   "8")check_device renoir;;
   "9")check_device odin;;
   "a")check_device mh2lm;;
+  "b")check_device meizu18s;;
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
