@@ -37,7 +37,12 @@ check_beta_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
     RECNAME="twrp-meizu18s-cleaned.img.xz"
     MD5="367814efc1f40b72a585fe7864769a4e"
     ;;
-  *)return 1
+  *)echo "
+$R! 不支持的机型：$1$O
+
+  适配请加群：${C}211414032$O
+
+$C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
   esac
   echo "
 $Y? 注意：当前机型TWRP是测试版，不保证可用性$O"
@@ -89,12 +94,7 @@ check_device(){ SERVER="https://trss.coding.net/p/TRSS/d/TWRP/git/raw/main"
     RECNAME="twrp-3.6.2_11-0-odinx-cleaned.img.xz"
     MD5="588128113eb5116b0a3aef30092a4c3c"
     ;;
-  *)check_beta_device "$1"||{ echo "
-$R! 不支持的机型：$1$O
-
-  适配请加群：${C}211414032$O
-
-$C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device;}
+  *)check_beta_device "$1"
 esac
   URL="$SERVER/$1/$RECNAME"
   echo "
