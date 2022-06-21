@@ -95,7 +95,7 @@ check_device(){ SERVER="https://trss.coding.net/p/TRSS/d/TWRP/git/raw/main"
     MD5="588128113eb5116b0a3aef30092a4c3c"
     ;;
   *)check_beta_device "$1"
-esac
+  esac
   URL="$SERVER/$1/$RECNAME"
   echo "
   当前机型为：$C$DEVICENAME ($1)$O
