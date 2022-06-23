@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-06-19-1";MINIVER="202206180"
+ONLINEVERSION="2022-06-23-1";MINIVER="202206180"
 check_beta_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   "mh2lm")
@@ -47,7 +47,7 @@ $C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
   echo "
 $Y? 注意：当前机型TWRP是测试版，不保证可用性$O"
 }
-check_device(){ SERVER="https://trss.coding.net/p/TRSS/d/TWRP/git/raw/main"
+check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/TimeRainStarSky/TWRP/main"
   case "$1" in
   "alioth")
     DEVICENAME="Redmi K40"
