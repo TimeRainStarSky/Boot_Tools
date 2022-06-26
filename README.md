@@ -2,7 +2,7 @@
 [![Stars](https://img.shields.io/github/stars/TimeRainStarSky/Boot_Tools?color=yellow&label=收藏)](https://github.com/TimeRainStarSky/Boot_Tools/stargazers)
 [![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/Boot_Tools/total?color=blue&label=下载)](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Boot_Tools.sh)
 [![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/Boot_Tools?color=green&label=发布版本)](https://github.com/TimeRainStarSky/Boot_Tools/releases/latest)  
-[![访问量](https://profile-counter.glitch.me/TimeRainStarSky-Boot_Tools/count.svg)](https://timerainstarsky.github.io/Boot_Tools/)
+[![访问量](https://profile-counter.glitch.me/TimeRainStarSky-Boot_Tools/count.svg)](https://timerainstarsky.github.io/Boot_Tools)
 
 ## 使用教程
 1. 准备：  
