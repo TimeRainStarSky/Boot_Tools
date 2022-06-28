@@ -66,7 +66,7 @@ check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/Ti
     ;;
   haydn)
     DEVICENAME="Redmi K40 Pro"
-    RECNAME="3.6.2_12-RedmiK40Pro[Pro+]-Mi11XPro-Mi11i_v3.7_A12-haydn-skkk_9fea3d3a-cleaned.img.xz"
+    RECNAME="3.6.2_12-RedmiK40Pro%5BPro+%5D-Mi11XPro-Mi11i_v3.7_A12-haydn-skkk_9fea3d3a-cleaned.img.xz"
     MD5="0c47a8357c9f346f602a5db61961f460"
     ;;
   venus)
