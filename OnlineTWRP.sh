@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-06-28-1";MINIVER="202206260"
+ONLINEVERSION="2022-06-29-1";MINIVER="202206260"
 check_beta_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   mh2lm)
@@ -64,6 +64,11 @@ check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/Ti
     RECNAME="3.6.2_12-RedmiK40S-RedmiPOCOF4_v3.7_A12-munch-skkk_12f5d392-cleaned.img.xz"
     MD5="0265d98a250a10ee44944b8aa04c22ca"
     ;;
+  haydn)
+    DEVICENAME="Redmi K40 Pro"
+    RECNAME="3.6.2_12-RedmiK40Pro[Pro+]-Mi11XPro-Mi11i_v3.7_A12-haydn-skkk_9fea3d3a-cleaned.img.xz"
+    MD5="0c47a8357c9f346f602a5db61961f460"
+    ;;
   venus)
     DEVICENAME="Mi 11"
     RECNAME="3.6.2_12-Mi11_v3.7_A12-venus-skkk_58836997-cleaned.img.xz"
@@ -83,11 +88,6 @@ check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/Ti
     DEVICENAME="Mi 12X"
     RECNAME="3.6.2_12-Mi12X_v3.7_A12-psyche-skkk_a9cbd499-cleaned.img.xz"
     MD5="5469284ff741cde97e12f5953b8abcdf"
-    ;;
-  haydn)
-    DEVICENAME="Redmi K40 Pro"
-    RECNAME="twrp-3.6.2_11-0-haydn-cleaned.img.xz"
-    MD5="745fe1d7419ab36c975e0e4a139327b5"
     ;;
   renoir)
     DEVICENAME="Mi 11 Lite"
