@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-06-26-1";MINIVER="202206230"
+ONLINEVERSION="2022-06-28-1";MINIVER="202206260"
 check_beta_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
   case "$1" in
   mh2lm)
@@ -137,7 +137,7 @@ $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
-$R! $2$O";echo "
+$R! $1$O";echo "
 $R! 下载文件失败，请检查网络，并尝试重新下载，或更换服务器$O
 
 $C  (1)$O重试 $C(*)$O返回";choose download_twrp;}
