@@ -1,7 +1,17 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-06-29-1";MINIVER="202206260"
-check_beta_device(){ SERVER="https://trss.coding.net/p/TWRP/d/TWRP/git/raw/main"
+ONLINEVERSION="2022-07-08-1";MINIVER="202206260"
+check_beta_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/TimeRainStarSky/TWRP-Beta/main"
   case "$1" in
+  renoir)
+    DEVICENAME="Mi 11 Lite"
+    RECNAME="twrp-3.6.2_11-0-renoir-cleaned.img.xz"
+    MD5="01745b860bb09fc28235ce24b32a9d29"
+    ;;
+  odin)
+    DEVICENAME="Mi MIX 4"
+    RECNAME="twrp-3.6.2_11-0-odinx-cleaned.img.xz"
+    MD5="588128113eb5116b0a3aef30092a4c3c"
+    ;;
   mh2lm)
     DEVICENAME="LG G8X ThinQ"
     RECNAME="twrp-mh2lm-cleaned.img.xz"
@@ -47,61 +57,61 @@ $C  (1)$O查看机型列表 $C(*)$O返回";choose choose_device
   echo "
 $Y? 注意：当前机型TWRP是测试版，不保证可用性$O"
 }
-check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/TimeRainStarSky/TWRP/main"
+check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/TimeRainStarSky/TWRP-v3.8/main"
   case "$1" in
   alioth)
     DEVICENAME="Redmi K40"
-    RECNAME="3.6.2_12-RedmiK40-RedmiPOCOF3_v3.7_A12-alioth-skkk_f077017d-cleaned.img.xz"
-    MD5="4f349e02faa48c817cbf761769efcfe6"
+    RECNAME="3.6.2_12-RedmiK40-RedmiPOCOF3_v3.8_A12-alioth-skkk_3a32a86d-cleaned.img.xz"
+    MD5="b285167419a319e6c629bf72e2040933"
     ;;
   thyme)
     DEVICENAME="Mi 10S"
-    RECNAME="3.6.2_12-Mi10S_v3.7_A12-thyme-skkk_1ca1c40c-cleaned.img.xz"
-    MD5="8dba519065d27fcf5cd911cefcc86dbd"
+    RECNAME="3.6.2_12-Mi10S_v3.8_A12-thyme-skkk_3005ea03-cleaned.img.xz"
+    MD5="3876ae95192aabbe7b32700e6c04d116"
     ;;
   munch)
     DEVICENAME="Redmi K40S"
-    RECNAME="3.6.2_12-RedmiK40S-RedmiPOCOF4_v3.7_A12-munch-skkk_12f5d392-cleaned.img.xz"
-    MD5="0265d98a250a10ee44944b8aa04c22ca"
+    RECNAME="3.6.2_12-RedmiK40S-RedmiPOCOF4_v3.8_A12-munch-skkk_2112f697-cleaned.img.xz"
+    MD5="c42de05773bcbf4935a6c6852496fe09"
     ;;
   haydn)
     DEVICENAME="Redmi K40 Pro"
-    RECNAME="3.6.2_12-RedmiK40Pro%5BPro+%5D-Mi11XPro-Mi11i_v3.7_A12-haydn-skkk_9fea3d3a-cleaned.img.xz"
+    RECNAME="3.6.2_12-RedmiK40Pro%5BPro+%5D-Mi11XPro-Mi11i_v3.8_A12-haydn-skkk_830b825e-cleaned.img.xz"
     MD5="0c47a8357c9f346f602a5db61961f460"
     ;;
   venus)
     DEVICENAME="Mi 11"
-    RECNAME="3.6.2_12-Mi11_v3.7_A12-venus-skkk_58836997-cleaned.img.xz"
-    MD5="d83e57bcd9fd17fac1e9a379c2a42c24"
+    RECNAME="3.6.2_12-Mi11_v3.8_A12-venus-skkk_ec5849ae-cleaned.img.xz"
+    MD5="afded7a5f8d1060e38ad1223b71b375c"
     ;;
   mars)
     DEVICENAME="Mi 11 Pro"
-    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.7_A12-star-skkk_7bb5f333-cleaned.img.xz"
-    MD5="80076fc38509251752ebedc98bb0bb79"
+    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8_A12-star-skkk_7ce980fc-cleaned.img.xz"
+    MD5="5b3edfac96adca2252fda35ec8cdd736"
     ;;
   star)
     DEVICENAME="Mi 11 Ultra"
-    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.7_A12-star-skkk_7bb5f333-cleaned.img.xz"
-    MD5="80076fc38509251752ebedc98bb0bb79"
+    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8_A12-star-skkk_7ce980fc-cleaned.img.xz"
+    MD5="5b3edfac96adca2252fda35ec8cdd736"
+    ;;
+  cupid)
+    DEVICENAME="Mi 12"
+    RECNAME="3.6.2_12-Mi12_v3.8_A12-cupid-skkk_4720075c-cleaned.img.xz"
+    MD5="ca41910245176eb15556140f57f0ed4e"
     ;;
   psyche)
     DEVICENAME="Mi 12X"
-    RECNAME="3.6.2_12-Mi12X_v3.7_A12-psyche-skkk_a9cbd499-cleaned.img.xz"
-    MD5="5469284ff741cde97e12f5953b8abcdf"
+    RECNAME="3.6.2_12-Mi12X_v3.8_A12-psyche-skkk_141ebcee-cleaned.img.xz"
+    MD5="5ad61074b6cdc9f2a2a0df3284a608ec"
     ;;
-  renoir)
-    DEVICENAME="Mi 11 Lite"
-    RECNAME="twrp-3.6.2_11-0-renoir-cleaned.img.xz"
-    MD5="01745b860bb09fc28235ce24b32a9d29"
-    ;;
-  odin)
-    DEVICENAME="Mi MIX 4"
-    RECNAME="twrp-3.6.2_11-0-odinx-cleaned.img.xz"
-    MD5="588128113eb5116b0a3aef30092a4c3c"
+  zeus)
+    DEVICENAME="Mi 12 Pro"
+    RECNAME="3.6.2_12-Mi12Pro_v3.8_A12-zeus-skkk_53b66a04-cleaned.img.xz"
+    MD5="714cebcc14c5e81f32c427dc99c62728"
     ;;
   *)check_beta_device "$1"
   esac
-  URL="$SERVER/$1/$RECNAME"
+  URL="$SERVER/$RECNAME"
   echo "
   当前机型为：$C$DEVICENAME ($1)$O
 
@@ -116,9 +126,9 @@ $C  (4)$O Mi 10S        (thyme)
 $C  (5)$O Mi 11         (venus)
 $C  (6)$O Mi 11 Pro     (mars)
 $C  (7)$O Mi 11 Ultra   (star)
-$C  (8)$O Mi 11 Lite    (renoir)
+$C  (8)$O Mi 12         (cupid)
 $C  (9)$O Mi 12X        (psyche)
-$C  (a)$O Mi MIX 4      (odin)
+$C  (a)$O Mi 12 Pro     (zeus)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
@@ -131,9 +141,9 @@ $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   5)check_device venus;;
   6)check_device mars;;
   7)check_device star;;
-  8)check_device renoir;;
+  8)check_device cupid;;
   9)check_device psyche;;
-  a)check_device odin;;
+  a)check_device zeus;;
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
