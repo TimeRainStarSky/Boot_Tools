@@ -1,5 +1,5 @@
 #Boot_Tools 在线TWRP下载数据脚本 作者：时雨🌌星空
-ONLINEVERSION="2022-07-08-1";MINIVER="202206260"
+ONLINEVERSION="2022-07-20-1";MINIVER="202206260"
 check_beta_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/TimeRainStarSky/TWRP-Beta/main"
   case "$1" in
   renoir)
@@ -61,53 +61,48 @@ check_device(){ SERVER="https://ghproxy.com/https://raw.githubusercontent.com/Ti
   case "$1" in
   alioth)
     DEVICENAME="Redmi K40"
-    RECNAME="3.6.2_12-RedmiK40-RedmiPOCOF3_v3.8_A12-alioth-skkk_3a32a86d-cleaned.img.xz"
-    MD5="b285167419a319e6c629bf72e2040933"
+    RECNAME="3.6.2_12-RedmiK40-RedmiPOCOF3_v3.8.3_A12-alioth-skkk_4f7299ea-cleaned.img.xz"
+    MD5="a368d43db585c1e65872f743ef67d8de"
     ;;
   thyme)
     DEVICENAME="Mi 10S"
-    RECNAME="3.6.2_12-Mi10S_v3.8_A12-thyme-skkk_3005ea03-cleaned.img.xz"
-    MD5="3876ae95192aabbe7b32700e6c04d116"
+    RECNAME="3.6.2_12-Mi10S_v3.8.3_A12-thyme-skkk_4d78d51e-cleaned.img.xz"
+    MD5="507bce1c48d94ed92dc0de8b981ebcfe"
     ;;
   munch)
     DEVICENAME="Redmi K40S"
-    RECNAME="3.6.2_12-RedmiK40S-RedmiPOCOF4_v3.8_A12-munch-skkk_2112f697-cleaned.img.xz"
-    MD5="c42de05773bcbf4935a6c6852496fe09"
+    RECNAME="3.6.2_12-RedmiK40S-RedmiPOCOF4_v3.8.3_A12-munch-skkk_31fedcb1-cleaned.img.xz"
+    MD5="42a0a4e7e5e56796b1c6a111832102d5"
     ;;
   haydn)
     DEVICENAME="Redmi K40 Pro"
-    RECNAME="3.6.2_12-RedmiK40Pro%5BPro+%5D-Mi11XPro-Mi11i_v3.8_A12-haydn-skkk_830b825e-cleaned.img.xz"
-    MD5="0c47a8357c9f346f602a5db61961f460"
+    RECNAME="3.6.2_12-RedmiK40Pro%5BPro+%5D-Mi11XPro-Mi11i_v3.8.3_A12-haydn-skkk_3f9fa49f-cleaned.img.xz"
+    MD5="b3962b41380dfd0d769d744347be7cdd"
     ;;
   venus)
     DEVICENAME="Mi 11"
-    RECNAME="3.6.2_12-Mi11_v3.8_A12-venus-skkk_ec5849ae-cleaned.img.xz"
-    MD5="afded7a5f8d1060e38ad1223b71b375c"
+    RECNAME="3.6.2_12-Mi11_v3.8.3_A12-venus-skkk_2703032e-cleaned.img.xz"
+    MD5="18b1a059bfb85db949632cafc253e878"
     ;;
   mars)
     DEVICENAME="Mi 11 Pro"
-    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8_A12-star-skkk_7ce980fc-cleaned.img.xz"
-    MD5="5b3edfac96adca2252fda35ec8cdd736"
+    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8.3_A12-star-skkk_4b340c56-cleaned.img.xz"
+    MD5="85e3a0279b208b7c302d02a5fccf426c"
     ;;
   star)
     DEVICENAME="Mi 11 Ultra"
-    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8_A12-star-skkk_7ce980fc-cleaned.img.xz"
-    MD5="5b3edfac96adca2252fda35ec8cdd736"
+    RECNAME="3.6.2_12-Mi11Ultra-Mi11Pro_v3.8.3_A12-star-skkk_4b340c56-cleaned.img.xz"
+    MD5="85e3a0279b208b7c302d02a5fccf426c"
     ;;
-  cupid)
-    DEVICENAME="Mi 12"
-    RECNAME="3.6.2_12-Mi12_v3.8_A12-cupid-skkk_4720075c-cleaned.img.xz"
-    MD5="ca41910245176eb15556140f57f0ed4e"
+  vili)
+    DEVICENAME="Mi 11T Pro"
+    RECNAME="3.6.2_12-Xiaomi11TPro_v3.8.3_A12-vili-skkk_4b44fe2a-cleaned.img.xz"
+    MD5="6b7c8365fcb1b506fb12f61fd011d290"
     ;;
   psyche)
     DEVICENAME="Mi 12X"
-    RECNAME="3.6.2_12-Mi12X_v3.8_A12-psyche-skkk_141ebcee-cleaned.img.xz"
-    MD5="5ad61074b6cdc9f2a2a0df3284a608ec"
-    ;;
-  zeus)
-    DEVICENAME="Mi 12 Pro"
-    RECNAME="3.6.2_12-Mi12Pro_v3.8_A12-zeus-skkk_53b66a04-cleaned.img.xz"
-    MD5="714cebcc14c5e81f32c427dc99c62728"
+    RECNAME="3.6.2_12-Mi12X_v3.8.3_A12-psyche-skkk_eb33d5a3-cleaned.img.xz"
+    MD5="22428e7b9e616b505efaff7b995d7d88"
     ;;
   *)check_beta_device "$1"
   esac
@@ -126,9 +121,8 @@ $C  (4)$O Mi 10S        (thyme)
 $C  (5)$O Mi 11         (venus)
 $C  (6)$O Mi 11 Pro     (mars)
 $C  (7)$O Mi 11 Ultra   (star)
-$C  (8)$O Mi 12         (cupid)
+$C  (8)$O Mi 11T Pro    (vili)
 $C  (9)$O Mi 12X        (psyche)
-$C  (a)$O Mi 12 Pro     (zeus)
 $C  (0)$O 返回
 
 $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
@@ -141,9 +135,8 @@ $C- 请输入你的选择：$O";read CHOOSE;echo "$CHOOSE">>"$DIR/.log"
   5)check_device venus;;
   6)check_device mars;;
   7)check_device star;;
-  8)check_device cupid;;
+  8)check_device vili;;
   9)check_device psyche;;
-  a)check_device zeus;;
   *)check_device "$CHOOSE"
   esac;}
 abort_download_twrp(){ [ -n "$1" ]&&echo "
