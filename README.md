@@ -61,3 +61,7 @@
 ### Awstme
 - GitHub：[Awstme](https://github.com/Awstme)
 - 酷安：[Awstme](http://www.coolapk.com/u/2806404)
+
+## 赞助支持
+- 爱发电：<https://afdian.net/@TimeRainStarSky>
+- Partme：<https://partme.com/TimeRainStarSky>
