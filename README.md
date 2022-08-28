@@ -1,20 +1,20 @@
 # V-AB分区设备一键安装Recovery和Magisk脚本
-[![Stars](https://img.shields.io/github/stars/TimeRainStarSky/Boot_Tools?color=yellow&label=收藏)](https://github.com/TimeRainStarSky/Boot_Tools/stargazers)
-[![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/Boot_Tools/total?color=blue&label=下载)](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Boot_Tools.sh)
-[![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/Boot_Tools?color=green&label=发行版)](https://github.com/TimeRainStarSky/Boot_Tools/releases/latest)  
+[![Stars](https://img.shields.io/github/stars/TimeRainStarSky/Boot_Tools?color=yellow&label=收藏)](../../stargazers)
+[![Downloads](https://img.shields.io/github/downloads/TimeRainStarSky/Boot_Tools/total?color=blue&label=下载)](Boot_Tools.sh)
+[![Releases](https://img.shields.io/github/v/release/TimeRainStarSky/Boot_Tools?color=green&label=发行版)](../../releases/latest)  
 [![访问量](https://profile-counter.glitch.me/TimeRainStarSky-Boot_Tools/count.svg)](https://timerainstarsky.github.io/Boot_Tools)
 
 ## 使用教程
 1. 准备：  
-① 脚本 [Boot_Tools.sh](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Boot_Tools.sh) 文件  
+① 脚本 [Boot_Tools.sh](Boot_Tools.sh) 文件  
 ② 终端：[MT管理器](https://www.coolapk.com/apk/bin.mt.plus) | [ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)  
 ③ 第三方 Recovery 镜像：[TWRP](https://twrp.me/Devices/)
 
 2. 运行脚本：  
 ① MT管理器：打开方式 ➞ Linux脚本 ➞ 执行  
-[![MT管理器运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/MT管理器运行脚本.gif)](https://www.coolapk.com/apk/bin.mt.plus)  
+[![MT管理器运行脚本.gif](Guide/MT管理器运行脚本.gif)](https://www.coolapk.com/apk/bin.mt.plus)  
 ② 终端：输入 sh [脚本路径] 并 回车 执行
-[![终端运行脚本.gif](https://cdn.jsdelivr.net/gh/TimeRainStarSky/Boot_Tools@main/Guide/终端运行脚本.gif)](https://github.com/hanxinhao000/ZeroTermux)
+[![终端运行脚本.gif](Guide/终端运行脚本.gif)](https://github.com/hanxinhao000/ZeroTermux)
 
 ## 使用说明
 - V-AB分区的设备会有两个系统分区，平时使用其中一个，更新系统时更新到另一个分区，然后重启进入新分区。它的好处是更新系统时手机处于正常开机状态，如果更新失败，可以切换回旧系统分区。它的坏处是把Recovery移动到了Boot分区里，安装第三方Recovery会变得更加麻烦。本脚本就是用于在系统更新后一键安装Recovery和Magisk。
